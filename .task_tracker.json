@@ -33,9 +33,9 @@
         },
         "Task1SubTask5": {
           "description": "Create unit tests",
-          "status": "to-do",
+          "status": "in-progress",
           "micro_agent": "TestCodeWritingAgent",
-          "details": "Implement comprehensive unit tests:\n- Test data models and validation\n- Test CRUD operations\n- Test error handling\n- Mock database interactions"
+          "details": "Currently implementing unit tests for BaseCRUDService operations including create, read, update, delete functionality and error handling scenarios"
         },
         "Task1SubTask6": {
           "description": "Implement integration tests",
