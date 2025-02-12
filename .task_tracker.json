@@ -33,15 +33,15 @@
         },
         "Task1SubTask5": {
           "description": "Create unit tests",
-          "status": "in-progress",
+          "status": "completed",
           "micro_agent": "TestCodeWritingAgent",
-          "details": "Currently implementing unit tests for BaseCRUDService operations including create, read, update, delete functionality and error handling scenarios"
+          "details": "Completed unit tests for:\n- BaseModel functionality\n- Schema validation and model-schema conversion\n- BaseCRUDService operations\nTests include proper error handling, validation, and edge cases."
         },
         "Task1SubTask6": {
           "description": "Implement integration tests",
-          "status": "to-do",
+          "status": "completed",
           "micro_agent": "TestCodeWritingAgent",
-          "details": "Create integration tests:\n- Test API endpoints\n- Test database interactions\n- Test error scenarios\n- End-to-end testing"
+          "details": "Completed integration tests including:\n- Test infrastructure setup with FastAPI TestClient\n- API endpoint tests for all CRUD operations\n- Error scenario testing\n- Database interaction verification\n- Test utilities and helper functions"
         }
       }
     }
