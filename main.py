@@ -1,7 +1,10 @@
-from fastapi import FastAPI, Depends
+from fastapi import FastAPI, Depends, Request
+from fastapi.responses import JSONResponse
+from fastapi.middleware.cors import CORSMiddleware
 from config import Settings
 from app.database import init_db, get_db
 from sqlalchemy.orm import Session
+from sqlalchemy.exc import SQLAlchemyError
 
 # Initialize FastAPI app and database
 app = FastAPI(
@@ -9,6 +12,23 @@ app = FastAPI(
     description="API service with RDS connectivity",
     version="0.1.0"
 )
+
+# Add CORS middleware
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],  # In production, replace with specific origins
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+
+# Global exception handler for database errors
+@app.exception_handler(SQLAlchemyError)
+async def sqlalchemy_exception_handler(request: Request, exc: SQLAlchemyError):
+    return JSONResponse(
+        status_code=500,
+        content={"message": "Database error occurred", "detail": str(exc)},
+    )
 
 # Load configuration and initialize database
 settings = Settings()
