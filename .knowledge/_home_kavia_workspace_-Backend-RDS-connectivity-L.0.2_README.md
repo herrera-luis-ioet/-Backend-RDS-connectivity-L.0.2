@@ -1,0 +1,1 @@
+{"is_source_file": false, "format": "", "description": "", "external_files": [], "external_methods": [], "published": [], "classes": [], "methods": [], "calls": [], "search-terms": [], "state": 2, "filename": "/home/kavia/workspace/-Backend-RDS-connectivity-L.0.2/README.md", "hash": "5ae10a81c2dcdd36447262eb4be6f5fb", "format-version": 3, "code-base-name": "default"}
